@@ -126,7 +126,21 @@ form p{
   display: flex;
   justify-content: space-around;
   margin: 32px auto 0;
-  width: 20%;
+  width: 30%;
+}
+
+
+.social-media li a{ 
+  display: flex;
+  align-items: center;
+  color: var(--blanco);  
+  font-family: var(--secondary-font); 
+  text-decoration: none;
+}
+
+.social-link-text{
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 .carousel {
