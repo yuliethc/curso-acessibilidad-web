@@ -93,6 +93,7 @@ nav{
   text-decoration: none;
   color: var(--blanco);
 }
+
 .nav-item {
   align-items: center;
   border-radius: 5px;
@@ -103,13 +104,21 @@ nav{
   width: 33%;
 }
 
-.nav-item:hover {
+.nav-item:hover,
+.nav-item:hover a{
   background-color: var(--verde);
+  cursor: pointer;
+  color: var(--gris-oscuro);
 }
+form p{
+  color: var(--blanco)
+}
+
 
 .intro {
   margin: 24px 196px 0;
   font-family: var(--secondary-font);
+  color:var(--blanco);
 }
 
 .social-media {
