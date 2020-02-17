@@ -56,18 +56,20 @@ body,header,section {
 }
 .skip-link{
   opacity: 0;
+  outline: none;
 }
 .skip-link:focus,
 .skip-link:active{
   background: var(--verde);
-  border-radius: 5px;
   color: (var(--gris-oscuro));
   font-family: var(--secondary-font);
   opacity:100;
   margin: 16px 0 8px;
   padding: 8px;
   text-decoration: none;
+  outline: solid var(--blanco);
 }
+
 .header {
   color: var(--blanco);
   font-family: var(--main-font);
@@ -123,8 +125,20 @@ nav{
   cursor: pointer;
   color: var(--gris-oscuro);
 }
+
+.nav-item:focus-within{
+  background-color: var(--verde);
+}
+
+.nav-item a:focus{
+  outline: none;
+  color: var(--gris-oscuro);
+}
+
 form p{
-  color: var(--blanco)
+  color: var(--verde);
+  font-family: var(--secondary-font);
+  padding: 2px;
 }
 
 
@@ -155,6 +169,13 @@ form p{
   padding-left: 8px;
   padding-right: 8px;
 }
+.social-media li a:focus{
+  outline:none;
+}
+.social-media li:focus-within,
+.social-media li:hover{
+  outline: 3px solid var(--verde);
+}
 
 .carousel {
   align-items: center;
@@ -164,7 +185,8 @@ form p{
 
 .window {
   overflow: hidden;
-  width: 805px;
+  width: 815px;
+  padding: 8px;
 }
 
 .project-container {
@@ -195,6 +217,10 @@ form p{
 .project-container button{
   background: none;
   border: none;
+  padding: 0;
+}
+.project-container button:focus-within{
+ outline: 3px solid var(--verde);
 }
 
 .arrow {
@@ -241,6 +267,10 @@ form p{
 input {
   outline: none;
   width: 100%;
+  padding: 8px;
+}
+input:focus{
+  outline: 3px solid var(--verde);  
 }
 
 .send-button {
@@ -257,6 +287,14 @@ input {
   margin-left: auto;
   font-size: 16px;
   border: none;
+  outline: none;
+  color: var(--gris-oscuro);
+}
+.send-button:focus,
+.send-button:hover{
+  background-color: var(--gris-medio);
+  color: var(--verde);
+  outline: solid var(--verde);
 }
 
 .notification {
