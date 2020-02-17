@@ -54,7 +54,20 @@ body,header,section {
   flex-direction: column;
   width: 100%;
 }
-
+.skip-link{
+  opacity: 0;
+}
+.skip-link:focus,
+.skip-link:active{
+  background: var(--verde);
+  border-radius: 5px;
+  color: (var(--gris-oscuro));
+  font-family: var(--secondary-font);
+  opacity:100;
+  margin: 16px 0 8px;
+  padding: 8px;
+  text-decoration: none;
+}
 .header {
   color: var(--blanco);
   font-family: var(--main-font);
