@@ -294,9 +294,13 @@ input:focus{
   outline: none;
   color: var(--gris-oscuro);
   cursor: pointer;
+  margin-right:10px ;
 }
 .send-button:focus,
-.send-button:hover{
+.send-button:hover,
+.modal-button:focus,
+.modal-button:hover
+{
   background-color: var(--gris-medio);
   color: var(--verde);
   outline: solid var(--verde);
@@ -326,6 +330,9 @@ input:focus{
   justify-content: center;
   position: fixed;
   width: 100vw;
+}
+#modal-header{
+  outline: 3px solid var(--verde);
 }
 
 .modal {
