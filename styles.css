@@ -54,6 +54,21 @@ body,header,section {
   flex-direction: column;
   width: 100%;
 }
+.skip-link{
+  opacity: 0;
+  outline: none;
+}
+.skip-link:focus,
+.skip-link:active{
+  background: var(--verde);
+  color: (var(--gris-oscuro));
+  font-family: var(--secondary-font);
+  opacity:100;
+  margin: 16px 0 8px;
+  padding: 8px;
+  text-decoration: none;
+  outline: solid var(--blanco);
+}
 
 .header {
   color: var(--blanco);
@@ -93,6 +108,7 @@ nav{
   text-decoration: none;
   color: var(--blanco);
 }
+
 .nav-item {
   align-items: center;
   border-radius: 5px;
@@ -103,13 +119,37 @@ nav{
   width: 33%;
 }
 
-.nav-item:hover {
+.nav-item:hover,
+.nav-item:hover a{
+  background-color: var(--verde);
+  cursor: pointer;
+  color: var(--gris-oscuro);
+}
+
+.nav-item:focus-within{
   background-color: var(--verde);
 }
 
-.intro {
-  margin: 0 196px;
+.nav-item a:focus{
+  outline: none;
+  color: var(--gris-oscuro);
+}
+
+form label{
+  color: var(--verde);
   font-family: var(--secondary-font);
+  padding: 2px;
+}
+.error{
+  color: var(--blanco);
+  font-family: var(--secondary-font);
+ 
+}
+
+.intro {
+  margin: 24px 196px 0;
+  font-family: var(--secondary-font);
+  color:var(--blanco);
 }
 
 .social-media {
@@ -117,7 +157,28 @@ nav{
   display: flex;
   justify-content: space-around;
   margin: 32px auto 0;
-  width: 20%;
+  width: 30%;
+}
+
+
+.social-media li a{ 
+  display: flex;
+  align-items: center;
+  color: var(--blanco);  
+  font-family: var(--secondary-font); 
+  text-decoration: none;
+}
+
+.social-link-text{
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.social-media li a:focus{
+  outline:none;
+}
+.social-media li:focus-within,
+.social-media li:hover{
+  outline: 3px solid var(--verde);
 }
 
 .carousel {
@@ -128,7 +189,8 @@ nav{
 
 .window {
   overflow: hidden;
-  width: 805px;
+  width: 815px;
+  padding: 8px;
 }
 
 .project-container {
@@ -137,7 +199,7 @@ nav{
   width: 1500px;
 }
 
-.project {
+.project-img {
   border-radius: 5px;
   border: 2px solid #000;
   display: inline-block;
@@ -145,31 +207,24 @@ nav{
   margin: 0 8px;
   transition: all 0.2s ease-in-out;
   width: 250px;
+  object-fit: cover;
 }
 
-.project:hover {
+.project-img:hover {
   cursor: pointer;
   transform: scale(1.1);
 }
-
-.project1 {
-  background: center / cover no-repeat url(./images/project1.png);
+.project-container li{
+  display: inline-block;
 }
 
-.project2 {
-  background: center / cover no-repeat url(./images/project2.png);
+.project-container button{
+  background: none;
+  border: none;
+  padding: 0;
 }
-
-.project3 {
-  background: center / cover no-repeat url(./images/project3.png);
-}
-
-.project4 {
-  background: center / cover no-repeat url(./images/project4.png);
-}
-
-.project5 {
-  background: center / cover no-repeat url(./images/project5.png);
+.project-container button:focus-within{
+ outline: 3px solid var(--verde);
 }
 
 .arrow {
@@ -194,6 +249,10 @@ nav{
   border-radius: 50%;
 }
 
+.arrow:focus{
+outline: 3px solid var(--verde);
+}
+
 .contact-section {
   align-items: center;
   background-color: var(--gris-oscuro);
@@ -216,9 +275,13 @@ nav{
 input {
   outline: none;
   width: 100%;
+  padding: 8px;
+}
+input:focus{
+  outline: 3px solid var(--verde);  
 }
 
-.send-button {
+.send-button, .modal-button {
   align-items: center;
   background-color: var(--verde);
   border-radius: 5px;
@@ -230,6 +293,21 @@ input {
   margin-bottom: 48px;
   width: 150px;
   margin-left: auto;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: var(--gris-oscuro);
+  cursor: pointer;
+  margin-right:10px ;
+}
+.send-button:focus,
+.send-button:hover,
+.modal-button:focus,
+.modal-button:hover
+{
+  background-color: var(--gris-medio);
+  color: var(--verde);
+  outline: solid var(--verde);
 }
 
 .notification {
@@ -237,7 +315,7 @@ input {
   background-color: var(--verde);
   border-radius: 5px;
   box-shadow: 8px 16px 32px 0px var(--shadow);
-  color: var(--blanco);
+  color: var(--gris-oscuro);
   display: none;
   font-family: var(--secondary-font);
   height: 50px;
@@ -257,6 +335,9 @@ input {
   position: fixed;
   width: 100vw;
 }
+#modal-header{
+  outline: 3px solid var(--verde);
+}
 
 .modal {
   align-items: center;
@@ -265,15 +346,16 @@ input {
   border: 2px solid #000;
   display: flex;
   flex-direction: column;
-  height: 700px;
+  height: 600px;
   justify-content: center;
   position: fixed;
-  top: 15%;
+  top: 5%;
   width: 700px;
+  padding: 56;
 }
 
 .modal-project-image {
-  background: center / cover no-repeat url(./images/project1.png);
+  
   border-radius: 5px;
   border: 2px solid #000;
   height: 400px;

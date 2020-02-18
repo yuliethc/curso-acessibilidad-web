@@ -12,75 +12,152 @@
   </head>
 
   <body>
+    <a href="#acerca-de" class="skip-link">Skip to Main</a>
     <header>
-      <img src="images/juliana.jpeg" alt="Juliana Gomez" class="header-img" src="images/juliana.jpeg" />
+      <img
+        src="images/juliana.jpeg"
+        alt="Juliana Gomez"
+        class="header-img"
+        src="images/juliana.jpeg"
+      />
       <h1 class="header">Juliana Gomez</h1>
       <h2 class="subtitle">Front End Developer</h2>
       <nav>
         <ul class="navigation">
-          <li class="nav-item"><a href="/acerca-de">Acerca de</a> </li>
-          <li class="nav-item"><a href="/proyectos">Mis Proyectos</a></li>
-          <li class="nav-item"><a href="/contacto">Contacto</a></li>
-        </ul>       
+          <li class="nav-item"><a href="#acerca-de">Acerca de</a></li>
+          <li class="nav-item"><a href="#proyectos">Mis Proyectos</a></li>
+          <li class="nav-item"><a href="#contacto">Contacto</a></li>
+        </ul>
       </nav>
     </header>
 
-    <div class="intro">
-      Hola! Soy Juliana 👋 Soy Colombo-Canadiense, amo los gatos y tambien crear
-      cosas lindas para la web 😍 Después de estudiar comunicación social y
-      ciencia política en la universidad, trabajé varios años en mercadeo
-      digital hasta que aprendí a programar. Llevo un poco más de tres años
-      enfocándome en front end, específicamente en JavaScript y accesibilidad.
-      Sueño con una web donde todo el mundo pueda participar. Aquí puedes ver
-      algunos de mis proyectos recientes y también puedes contactarme por si
-      quieres hablar de tecnología, accesibilidad o gatos!
-      <div class="social-media">
-        <div>
-          <a href="https://twitter.com/gmzjuliana" target="_blank"
-            ><img src="images/twitter.png"
-          /></a>
-        </div>
-        <div>
-          <a href="https://github.com/gmzjuliana" target="_blank"
-            ><img src="images/github-logo.png"
-          /></a>
-        </div>
-        <div>
-          <a href="https://www.linkedin.com/in/gomezjuliana/" target="_blank"
-            ><img src="images/linkedin.png"
-          /></a>
-        </div>
-      </div>
-    </div>
+    <main>
+      <section id="acerca-de">
+        <h2 class="header">
+          Acerca de mí
+        </h2>
+        <p class="intro">
+          Hola! Soy Juliana 👋 Soy Colombo-Canadiense, amo los gatos y tambien
+          crear cosas lindas para la web 😍 Después de estudiar comunicación
+          social y ciencia política en la universidad, trabajé varios años en
+          mercadeo digital hasta que aprendí a programar. Llevo un poco más de
+          tres años enfocándome en front end, específicamente en JavaScript y
+          accesibilidad. Sueño con una web donde todo el mundo pueda participar.
+          Aquí puedes ver algunos de mis proyectos recientes y también puedes
+          contactarme por si quieres hablar de tecnología, accesibilidad o
+          gatos!
+        </p>
+        <ul class="social-media">
+          <li>
+            <a href="https://twitter.com/gmzjuliana" target="_blank"
+              ><img src="images/twitter.png" alt="Twitter"
+            />
+          <p class="social-link-text">Twitter</p>
+          </a>
+          </li>
+          <li>
+            <a href="https://github.com/gmzjuliana" target="_blank"
+              ><img src="images/github-logo.png" alt="Github"
+            />
+            <p class="social-link-text">Github</p>
+          </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/gomezjuliana/" target="_blank"
+              ><img src="images/linkedin.png" alt="Linkedin"
+            />
+            <p class="social-link-text">Linkedin</p>
+          </a>
+          </li>
+        </ul>
+      </section>
 
-    <div class="carousel">
-      <div class="arrow arrow-left"></div>
-      <div class="window">
-        <div class="project-container">
-          <div class="project project1"></div>
-          <div class="project project2"></div>
-          <div class="project project3"></div>
-          <div class="project project4"></div>
-          <div class="project project5"></div>
+      <section id="proyectos">
+        <h2 class="header">
+          Mis Proyectos
+        </h2>
+        <div class="carousel">
+          <button class="arrow arrow-left" aria-label="Boton hacia atrás"></button>
+          <div class="window">
+            <ul class="project-container">
+              <li class="project1-container">
+                <button class="project project1">
+                  <img class="project-img"
+                    
+                    src="/images/project1.png"
+                    alt="Proyecto Número 1"
+                  />
+                </button>
+              </li>
+              <li class="project2-container">
+                <button class="project project2">
+                  <img class="project-img"
+                    
+                    src="/images/project2.png"
+                    alt="Proyecto Número 2"
+                  />
+                </button>
+              </li>
+              <li class="project3-container">
+                <button class="project project3">
+                  <img class="project-img"
+                    
+                    src="/images/project3.png"
+                    alt="Proyecto Número 3"
+                  />
+                </button>
+              </li>
+              <li class="project4-container aria-hidden="true">
+                <button class="project project4" tabindex="-1">
+                  <img class="project-img"
+                    
+                    src="/images/project4.png"
+                    alt="Proyecto Número 4"
+                  />
+                </button>
+              </li>
+              <li class="project5-container aria-hidden="true">
+                <button class="project project5" tabindex="-1">
+                  <img class="project-img"
+                    
+                    src="/images/project5.png"
+                    alt="Proyecto Número 5"
+                  />
+                </button>
+              </li>
+            </ul>
+          </div>
+          <button class="arrow arrow-right" aria-label="Boton adelante"></button>
         </div>
-      </div>
-      <div class="arrow arrow-right"></div>
-    </div>
+      </section>
+    </main>
 
-    <div class="contact-section">
-      <div class="header">Contacto</div>
-      <div class="form-container">
-        Nombre<input type="text" /> <br />
-        Correo<input type="text" /> <br />
-        <div class="message-input">Mensaje<input type="text" /> <br /></div>
-        <div class="send-button">Enviar</div>
-      </div>
-    </div>
-    <div class="notification">El formulario fue enviado sin errores</div>
+    <footer class="contact-section">
+      <h2 class="header">Contacto</h2>     
+      <form class="form-container">
+        <label align="center">Escríbeme un mensaje</label>
+        <label>
+          Nombre
+        </label>
+        <input type="text" aria-label="Nombre" id="name"/> 
+        <span id="name-error" class="error" aria-live="assertive"></span>
+        <br />
+        <label>Correo</label><input type="text" aria-label="Correo" id="email"/> 
+        <span id="email-error" class="error" aria-live="assertive"></span>
+        <br />
+        <label class="message-input"> <p>Mensaje</p><input type="text" /> <br /></label>
+        <button class="send-button">Enviar</button>
+      </form>
+    </footer>
+
+    <div class="notification" aria-live="assertive"></div>
     <div class="modal-container">
       <div class="modal">
+       <h2 class="header" id="modal-header" tabindex="0">
         Ejemplo de un proyecto mio
-        <div class="modal-project-image"></div>
+       </h2>
+       <img src="/images/project1.png" class="modal-project-image" alt="Projecto">    
+       <button class="modal-button">Cerrar</button>   
       </div>
     </div>
 
