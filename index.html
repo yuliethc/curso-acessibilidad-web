@@ -140,17 +140,17 @@
           Nombre
         </label>
         <input type="text" aria-label="Nombre" id="name"/> 
-        <span id="name-error" class="error"></span>
+        <span id="name-error" class="error" aria-live="assertive"></span>
         <br />
         <label>Correo</label><input type="text" aria-label="Correo" id="email"/> 
-        <span id="email-error" class="error"></span>
+        <span id="email-error" class="error" aria-live="assertive"></span>
         <br />
         <label class="message-input"> <p>Mensaje</p><input type="text" /> <br /></label>
         <button class="send-button">Enviar</button>
       </form>
     </footer>
 
-    <div class="notification">El formulario fue enviado sin errores</div>
+    <div class="notification" aria-live="assertive"></div>
     <div class="modal-container">
       <div class="modal">
        <h2 class="header" id="modal-header" tabindex="0">

@@ -94,6 +94,7 @@ function validateForm(e){
 function showNotification() {
   document.querySelector('.form-container').reset();
   document.querySelector(".notification").style.display = "flex";
+  document.querySelector(".notification").innerHTML = "El formulario fue enviado sin errores";
   setTimeout(function() {
     document.querySelector(".notification").style.display = "none";
   }, 3000);
