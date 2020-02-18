@@ -133,14 +133,19 @@
     </main>
 
     <footer class="contact-section">
-      <h2 class="header">Contacto</h2>
+      <h2 class="header">Contacto</h2>     
       <form class="form-container">
-        <p>
+        <label align="center">Escríbeme un mensaje</label>
+        <label>
           Nombre
-        </p>
-        <input type="text" aria-label="Nombre" /> <br />
-        <p>Correo</p><input type="text" aria-label="Correo" /> <br />
-        <div class="message-input"> <p>Mensaje</p><input type="text" /> <br /></div>
+        </label>
+        <input type="text" aria-label="Nombre" id="name"/> 
+        <span id="name-error" class="error"></span>
+        <br />
+        <label>Correo</label><input type="text" aria-label="Correo" id="email"/> 
+        <span id="email-error" class="error"></span>
+        <br />
+        <label class="message-input"> <p>Mensaje</p><input type="text" /> <br /></label>
         <button class="send-button">Enviar</button>
       </form>
     </footer>
